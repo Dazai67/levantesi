@@ -1,1 +1,153 @@
-bem vindo! tudo bem? 
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man Acessível</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+        }
+
+        #game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        canvas {
+            background-color: #000;
+            border: 2px solid #fff;
+        }
+
+        #controls {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+        }
+
+        #controls button {
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            background-color: #444;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        #controls button:focus {
+            outline: 2px solid #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas" aria-label="Jogo Pac-Man" role="application"></canvas>
+        <div id="controls">
+            <button id="up" aria-label="Cima">▲</button>
+            <button id="left" aria-label="Esquerda">◀</button>
+            <button id="down" aria-label="Baixo">▼</button>
+            <button id="right" aria-label="Direita">▶</button>
+        </div>
+    </div>
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const context = canvas.getContext('2d');
+
+        canvas.width = 400;
+        canvas.height = 400;
+
+        const pacMan = {
+            x: 200,
+            y: 200,
+            size: 20,
+            dx: 0,
+            dy: 0,
+            speed: 2
+        };
+
+        function drawPacMan() {
+            context.beginPath();
+            context.arc(pacMan.x, pacMan.y, pacMan.size, 0.25 * Math.PI, 1.75 * Math.PI);
+            context.lineTo(pacMan.x, pacMan.y);
+            context.fillStyle = 'yellow';
+            context.fill();
+            context.closePath();
+        }
+
+        function update() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            drawPacMan();
+
+            pacMan.x += pacMan.dx;
+            pacMan.y += pacMan.dy;
+
+            if (pacMan.x < pacMan.size) pacMan.x = pacMan.size;
+            if (pacMan.y < pacMan.size) pacMan.y = pacMan.size;
+            if (pacMan.x > canvas.width - pacMan.size) pacMan.x = canvas.width - pacMan.size;
+            if (pacMan.y > canvas.height - pacMan.size) pacMan.y = canvas.height - pacMan.size;
+
+            requestAnimationFrame(update);
+        }
+
+        function movePacMan(e) {
+            switch (e.key) {
+                case 'ArrowUp':
+                    pacMan.dx = 0;
+                    pacMan.dy = -pacMan.speed;
+                    break;
+                case 'ArrowDown':
+                    pacMan.dx = 0;
+                    pacMan.dy = pacMan.speed;
+                    break;
+                case 'ArrowLeft':
+                    pacMan.dx = -pacMan.speed;
+                    pacMan.dy = 0;
+                    break;
+                case 'ArrowRight':
+                    pacMan.dx = pacMan.speed;
+                    pacMan.dy = 0;
+                    break;
+            }
+        }
+
+        document.addEventListener('keydown', movePacMan);
+
+        const upButton = document.getElementById('up');
+        const downButton = document.getElementById('down');
+        const leftButton = document.getElementById('left');
+        const rightButton = document.getElementById('right');
+
+        upButton.addEventListener('click', () => {
+            pacMan.dx = 0;
+            pacMan.dy = -pacMan.speed;
+        });
+
+        downButton.addEventListener('click', () => {
+            pacMan.dx = 0;
+            pacMan.dy = pacMan.speed;
+        });
+
+        leftButton.addEventListener('click', () => {
+            pacMan.dx = -pacMan.speed;
+            pacMan.dy = 0;
+        });
+
+        rightButton.addEventListener('click', () => {
+            pacMan.dx = pacMan.speed;
+            pacMan.dy = 0;
+        });
+
+        update();
+    </script>
+</body>
+</html>
