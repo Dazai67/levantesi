@@ -1,153 +1,86 @@
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pac-Man Acessível</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: black;
-        }
 
-        #game-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+<title></title> *＊✿❀𝑳𝒆𝒗𝒂𝒏𝒕𝒆𝒔𝒊.𝒂𝒓𝒕𝒔❀✿＊*
 
-        canvas {
-            background-color: #000;
-            border: 2px solid #fff;
-        }
-
-        #controls {
-            margin-top: 20px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 10px;
-        }
-
-        #controls button {
-            width: 60px;
-            height: 60px;
-            font-size: 24px;
-            background-color: #444;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-
-        #controls button:focus {
-            outline: 2px solid #00ff00;
-        }
-    </style>
 </head>
+
 <body>
-    <div id="game-container">
-        <canvas id="gameCanvas" aria-label="Jogo Pac-Man" role="application"></canvas>
-        <div id="controls">
-            <button id="up" aria-label="Cima">▲</button>
-            <button id="left" aria-label="Esquerda">◀</button>
-            <button id="down" aria-label="Baixo">▼</button>
-            <button id="right" aria-label="Direita">▶</button>
-        </div>
-    </div>
-    <script>
-        const canvas = document.getElementById('gameCanvas');
-        const context = canvas.getContext('2d');
 
-        canvas.width = 400;
-        canvas.height = 400;
+<p> style="color:black;background-color:pink;font-size:20px">Bem vindo!</p>
+<!DOCTYPE html>
 
-        const pacMan = {
-            x: 200,
-            y: 200,
-            size: 20,
-            dx: 0,
-            dy: 0,
-            speed: 2
-        };
+<html>
 
-        function drawPacMan() {
-            context.beginPath();
-            context.arc(pacMan.x, pacMan.y, pacMan.size, 0.25 * Math.PI, 1.75 * Math.PI);
-            context.lineTo(pacMan.x, pacMan.y);
-            context.fillStyle = 'yellow';
-            context.fill();
-            context.closePath();
-        }
+<head>
 
-        function update() {
-            context.clearRect(0, 0, canvas.width, canvas.height);
-            drawPacMan();
+<title></title> *＊✿❀𝑳𝒆𝒗𝒂𝒏𝒕𝒆𝒔𝒊.𝒂𝒓𝒕𝒔❀✿＊*
 
-            pacMan.x += pacMan.dx;
-            pacMan.y += pacMan.dy;
+</head>
 
-            if (pacMan.x < pacMan.size) pacMan.x = pacMan.size;
-            if (pacMan.y < pacMan.size) pacMan.y = pacMan.size;
-            if (pacMan.x > canvas.width - pacMan.size) pacMan.x = canvas.width - pacMan.size;
-            if (pacMan.y > canvas.height - pacMan.size) pacMan.y = canvas.height - pacMan.size;
+<body>
 
-            requestAnimationFrame(update);
-        }
+<p style="color:black;background-color:pink;font-size:20px">Bem vindo!</p>
 
-        function movePacMan(e) {
-            switch (e.key) {
-                case 'ArrowUp':
-                    pacMan.dx = 0;
-                    pacMan.dy = -pacMan.speed;
-                    break;
-                case 'ArrowDown':
-                    pacMan.dx = 0;
-                    pacMan.dy = pacMan.speed;
-                    break;
-                case 'ArrowLeft':
-                    pacMan.dx = -pacMan.speed;
-                    pacMan.dy = 0;
-                    break;
-                case 'ArrowRight':
-                    pacMan.dx = pacMan.speed;
-                    pacMan.dy = 0;
-                    break;
-            }
-        }
+  
 
-        document.addEventListener('keydown', movePacMan);
 
-        const upButton = document.getElementById('up');
-        const downButton = document.getElementById('down');
-        const leftButton = document.getElementById('left');
-        const rightButton = document.getElementById('right');
 
-        upButton.addEventListener('click', () => {
-            pacMan.dx = 0;
-            pacMan.dy = -pacMan.speed;
-        });
+<hr>
 
-        downButton.addEventListener('click', () => {
-            pacMan.dx = 0;
-            pacMan.dy = pacMan.speed;
-        });
+<p> <b> Sobre mim </b> 
 
-        leftButton.addEventListener('click', () => {
-            pacMan.dx = -pacMan.speed;
-            pacMan.dy = 0;
-        });
+Desenho desde meus  13 anos, 
 
-        rightButton.addEventListener('click', () => {
-            pacMan.dx = pacMan.speed;
-            pacMan.dy = 0;
-        });
+No estilo de fanart, baseado em animes 
 
-        update();
-    </script>
-</body>
-</html>
+Em forma tradicional,  logo que entramos  na pandemia, me dediquei a isso... 
+
+Muito tempo se passou e  a minha mãe  comprou um curso na internet,  método fanart 0.3 e me fez  a abranger a minha habilidade artística, e o digital ficou por minha conta,  estudo sozinha  sobre os desenhos e artes. 
+
+</p>
+
+<p>  </p>
+  
+  <li> <b> sobre o meu estilo</b>:
+   
+   É meio realístico, com tons de cartoon  e olhos de animes, e cores claras.
+    
+    
+   <p>instagram : </p>
+
+<a href=f=" https://www.instagram.com/p/C-islivP_VO/?igsh=MTd1M3ozNGJ4bTl5eA==" target="_blank">levantesi.arts</a>
+    
+  <p> lá eu terá uma  ideia ampla  dos meus trabalhos 
+    
+    
+   <p> <b> O que eu  faço </b>:
+      <p>
+      
+ <li>oc (  seu personagem para canal de YouTube) 
+ <li> casais, em poses românticas
+ <li>  animais. 
+ <li> capas de livros ( físicos,  wattpad) 
+                    <p>
+               
+           <li> meio : 100 Reais 
+             <li > traços  mais finos e precisos , coloração  tons pastéis , ou mesmo  sombreado   havendo  intensidade  na expressão  facial, inspirado em  animes  
+               <p>
+                 <p>
+               
+               <li> <b> HARD  COMPLETO  : 230 -300  Reais 
+                 desenho  especial , tendo o corpo inteiro                   sobre a tela ,  a pose  que o cliente  pediu ,  traços  marcantes , iluminação  precisa, o rosto  de  várias  formas que posso  fazer.  
+                 <p> 
+                   <p>
+                 
+                 <li> <b> PREÇOS  podem  VARIAR  DE ACORDO COM O pedido </b> 
+                   
+             <p>
+                 
+                   <p>
+                
+                     <p>CONTATO:
+                       <a href=f=" https://www.instagram.com/p/C-islivP_VO/?igsh=MTd1M3ozNGJ4bTl5eA==" target="_blank">direct instagram</a>
