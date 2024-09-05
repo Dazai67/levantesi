@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levantesi Arts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: cover;
+            position: relative; /* Para permitir a pseudo-classe ::before funcionar */
+            z-index: 1;
+        }
+        
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('desenho.webp');
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: cover;
+            filter: brightness(100%); /* Ajuste de brilho */
+            z-index: -1; /* Para que a imagem fique atrás do conteúdo */
+        }
+
+        .header {
+            background: linear-gradient(to top right, #ffccff 18%, #66ffff 100%);
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            font-size: 1.25em; /* Adjust size relative to parent */
+        }
+
+        .navbar {
+            margin-top: 10px;
+        }
+
+        .navbar a {
+            color: darkblue;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+            color: yellow;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .content {
+            padding: 10px;
+            background-color: rgba(220, 220, 255, 0.85);
+        }
+
+        .content p {
+            margin: 10px 0;
+        }
+
+        .content li {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .content {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Levantesi.arts</h1>
+        <div class="navbar">
+            <a href="https://www.instagram.com/levantesi.arts?igsh=MTFhcmdhOGd4NmtxMw==" target="_blank">Desenhos</a>
+            <a href="https://www.instagram.com/levantesi.arts?igsh=MTFhcmdhOGd4NmtxMw==" target="_blank">Perfil</a>
+            <a href="https://www.instagram.com/levantesi.arts?igsh=MTFhcmdhOGd4NmtxMw==" target="_blank">Contato</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <p class="subtitle">*＊✿❀𝑳𝒆𝒗𝒂𝒏𝒕𝒆𝒔𝒊.𝒂𝒓𝒕𝒔❀✿＊*</p>
+            <hr>
+            <p class="subtitle" style="color:black; background-color:pink; font-size:1.25em;">Bem-vindo!</p>
+            <hr>
+            <p class="subtitle"><b>Sobre mim</b></p>
+            <p>Desenho desde meus 13 anos, no estilo de fanart, baseado em animes. Em forma tradicional, logo que entramos na pandemia, me dediquei a isso. Muito tempo se passou e minha mãe comprou um curso na internet, método fanart 0.3, e me fez abranger a minha habilidade artística. O digital ficou por minha conta, estudo sozinha sobre desenhos e artes.</p>
+
+            <p class="subtitle"><b>Sobre o meu estilo</b></p>
+            <p>É meio realístico, com tons de cartoon e olhos de animes, e cores claras.</p>
+
+            <p>Instagram: <a href="https://www.instagram.com/p/C-islivP_VO/?igsh=MTd1M3ozNGJ4bTl5eA" target="_blank"><img src="insta.webp" alt="Instagram" height="20" width="20"></a></p>
+            <p>Lá você terá uma ideia ampla dos meus trabalhos.</p>
+
+            <p class="subtitle"><b>O que eu faço</b></p>
+            <ul>
+                <li>OC (seu personagem para canal do YouTube)</li>
+                <li>Casais, em poses românticas</li>
+                <li>Animais</li>
+                <li>Capas de livros (físicos, Wattpad)</li>
+            </ul>
+
+            <p class="subtitle"><b>Preços 😃</b></p>
+            <ul>
+                <li><b>Desenhos simples:</b> 50 Reais - Menos brilhos, traços simples, lineart grossa, com olhos grandes estilo infantil</li>
+                <li><b>Meio:</b> 100 Reais - Traços mais finos e precisos, coloração em tons pastéis ou sombreado, intensidade na expressão facial, inspirado em animes</li>
+                <li><b>Hard Completo:</b> 230-300 Reais - Desenho especial, corpo inteiro sobre a tela, pose solicitada pelo cliente, traços marcantes, iluminação precisa, várias formas de rosto</li>
+                <li><b>Preços podem variar de acordo com o pedido.</b></li>
+            </ul>
+
+            <p><b>Contato:</b> <a href="https://www.instagram.com/p/C-islivP_VO/?igsh=MTd1M3ozNGJ4bTl5eA" target="_blank">Conversar</a></p>
+        </div>
+    </div>
+
+</body>
+
+</html>
